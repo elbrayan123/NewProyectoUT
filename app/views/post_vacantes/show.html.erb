@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Carrera:</strong>
+  <%= @post_vacante.carrera %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @post_vacante.area %>
+</p>
+
+<p>
+  <strong>Numero de vacantes:</strong>
+  <%= @post_vacante.nvacantes %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @post_vacante.descripcion %>
+</p>
+
+<%= link_to 'Editar', edit_post_vacante_path(@post_vacante) %> |
+<%= link_to 'Regresar', post_vacantes_path %>

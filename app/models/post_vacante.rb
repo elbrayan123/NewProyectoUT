@@ -1,0 +1,2 @@
+class PostVacante < ApplicationRecord
+end

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<div class="page-header">
+<h1>Todas tus vacantes</h1>
+</div>
+
+<a class="btn btn-primary"    <%= link_to "Agregar nueva vacante", new_post_vacante_path %> 
+
+<% @post_vacantes.each  do |post_vacante|   %>
+
+     <div class="post_vacante">
+       <strong>  
+       Carrera:
+       </strong>
+              <%=  post_vacante.carrera %>
+       <strong>  
+       <p>Area:
+       </strong>
+              <%=  post_vacante.area %>
+              </p>
+       <strong>  
+      <p>Numero de vacantes:
+       </strong>
+              <%=  post_vacante.nvacantes %>
+              </p>
+        <strong>  
+        <p>Descripción:
+       </strong>
+              <%=  post_vacante.descripcion %>
+              </p>     
+     
+
+        <div>
+        <%= link_to "Creada hace: "+ time_ago_in_words(post_vacante.created_at), post_vacante %>
+          <span class="admin">
+           | <%= link_to "Editar", edit_post_vacante_path(post_vacante) %> |
+            <%= link_to "Eliminar", post_vacante, method: :delete, data: { confirm: "¿Esta que quiere eliminar esta vacante?" } %>
+          </span>
+        
+       
+        </div>
+ </div>
+        
+<% end %>
+
