@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :alumnos
   devise_for :empresas
   resources :post_vacantes
 
