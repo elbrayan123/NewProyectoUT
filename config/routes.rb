@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :empresas
   resources :post_vacantes
 
   root to: 'post_vacantes#index'
